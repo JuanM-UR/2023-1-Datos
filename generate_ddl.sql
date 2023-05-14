@@ -72,7 +72,8 @@ create table matricula(
 	codigo_matricula varchar(10),
 	fecha_matricula date not null,
 	fecha_revovacion date,
-	foreign key (nit_empresa) REFERENCES empresa(nit)
+	foreign key (nit_empresa) REFERENCES empresa(nit),
+	primary key (nit_empresa,codigo_matricula)
 );
 
 create table CIIU_empresa(
